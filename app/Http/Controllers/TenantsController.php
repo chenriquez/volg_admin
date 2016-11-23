@@ -16,7 +16,7 @@ class TenantsController extends Controller
 
         //$tenants = Tenant::all();
 
-        return view('admin.tenants');
+        return view('tenants');
     }
 
     function detail($id) {
@@ -25,7 +25,7 @@ class TenantsController extends Controller
 		//print_r($tenant);
 		//exit();
 
-    	return view('admin.tenants.tenant_details', compact('tenant'));
+    	return view('tenant_details', compact('tenant'));
     }
 
     function tenants() {

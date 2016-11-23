@@ -3,7 +3,7 @@ function tenant(tenant) {
     this.label = ko.observable(tenant.label_tenant);
 }
 
-var viewModel = {
+var tenantModel = {
     tenants: ko.observableArray([]),
     loadTenants: function () {
         var self = this;
@@ -12,8 +12,12 @@ var viewModel = {
                 self.tenants(tenants)
             }
         );
+    },
+    editarTenant: function (tenant) {	
+    	openEditModal(tenant);
     }
-};
+
+};	
 
 
 
